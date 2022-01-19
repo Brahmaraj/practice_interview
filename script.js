@@ -40,9 +40,29 @@
     let x = {
         a:[1,2]
     };
-    var myweakMap = new WeakMap();
-    myweakMap.set(x,'object1');
+    var myweakMap = new WeakSet();
+    myweakMap.add(x);
     
 }
-x = null;
 console.log(myweakMap);
+
+const wset = new WeakMap();
+
+// top level static var, should show up in `console.log(wset)` after a run
+let arr = [1];
+wset.set(arr,1);
+
+function test() {
+  let obj = {a:1}; //stack var, should get GCed
+  wset.set(obj,2);
+}
+
+test();
+
+//if we wanted to get rid of `arr` in `wset`, we could explicitly de-reference it
+//arr = null;
+
+// when run with devtools console open, `wset` always holds onto `obj`
+// when devtools are closed and then opened after, `wset` has the `arr` entry,
+// but not the `obj` entry, as expected
+console.log(wset);
