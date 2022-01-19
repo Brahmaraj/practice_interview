@@ -40,10 +40,14 @@ function first(){
             function fourth(){
                 console.log(inthird+" ",insecond+" ",infirst+" ",global);
             }
-            return fourth;//breakpoint here for scope chain
+            fourth();//breakpoint here for scope chain
         }
-        return third;
+        third(); // doing this pushes functions on top of each other
+                // if we return third and execute it using currying then functions aren't
+                // pushed on top of each other the returned function is executed here 
+                // calling is poped out of stack and inner func is pushed on top of stack
     }
     return second;
 }
-first()()()();
+first()(); // due to this first is popped of the stack and second is pushed as after return 
+            // there is nothing so the returned function is now added to stack !!!!
