@@ -34,7 +34,8 @@
 // console.log(myMap);
 
 
-
+//after loading this page goto performance and click on dustbin icon to garbage collect
+//this remove the refrence to objects that aren't in scope (out of scope/different context)
 
 {
     let x = {
@@ -66,3 +67,5 @@ test();
 // when devtools are closed and then opened after, `wset` has the `arr` entry,
 // but not the `obj` entry, as expected
 console.log(wset);
+
+arr = null;
