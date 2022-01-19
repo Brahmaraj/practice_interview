@@ -20,3 +20,30 @@ function funcScop(){
 funcScop();
 //console.log(a+" ",b+" ",c); reference error because var is func scoped and function has {} block as well
 //so let and const are'nt accesible from outside either
+
+//closure
+function bigContainer(){
+    var a = 'closure';
+    function innerContaier(){
+        console.log(a);
+    }
+    return innerContaier;
+}
+bigContainer()();
+var global = "global";
+function first(){
+    let infirst = "Inside First";
+    function second(){
+        let insecond = "Inside Second";
+        function third(){
+            let inthird = "Inside Third";
+            function fourth(){
+                console.log(inthird+" ",insecond+" ",infirst+" ",global);
+            }
+            return fourth;//breakpoint here for scope chain
+        }
+        return third;
+    }
+    return second;
+}
+first()()()();
