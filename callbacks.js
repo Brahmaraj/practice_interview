@@ -8,6 +8,14 @@ function operation(logic,operand1,operand2){ //operation is HOF that takes add a
     return logic(operand1,operand2);
 }
 
+console.log(add(3,4));
+
+console.log(sub(3,4));
+
+console.log(mul(3,4));
+
 console.log(operation(add,3,5));
+
 console.log(operation(sub,3,5));
+
 console.log(operation(mul,3,5));
