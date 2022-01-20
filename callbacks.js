@@ -4,7 +4,7 @@ let sub = (x,y) => x-y;
 
 let mul = (x,y) => x*y;
 
-function operation(logic,operand1,operand2){
+function operation(logic,operand1,operand2){ //operation is HOF that takes add as callback and returns result
     return logic(operand1,operand2);
 }
 
