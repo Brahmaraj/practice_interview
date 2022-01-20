@@ -50,3 +50,24 @@ console.log(array1.reduce((prev,curr)=>{
     prev += curr;
     return prev;
 },10))
+
+function Person(name,age,sex){
+    this.name = name;
+    this.age = age;
+    this.sex = sex;
+    this.greet = function(){
+        return `${this.name} is ${this.age} years old and is ${this.sex}`;
+    }
+}
+
+let newPerson = {
+    newgreet: function(){
+        return `${this.name} welcome to JS`;
+    }
+}
+
+const person1 = new Person("Brahma",21,"male");
+console.log(person1.greet());
+console.log(Object.setPrototypeOf(person1, newPerson));
+console.log(person1.newgreet()); //__proto__ used to look up the chain
+console.log(person1.__proto__)
