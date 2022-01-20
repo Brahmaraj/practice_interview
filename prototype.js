@@ -70,4 +70,4 @@ const person1 = new Person("Brahma",21,"male");
 console.log(person1.greet());
 console.log(Object.setPrototypeOf(person1, newPerson));
 console.log(person1.newgreet()); //__proto__ used to look up the chain
-console.log(person1.__proto__)
+console.log(person1.__proto__)//
