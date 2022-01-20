@@ -9,11 +9,11 @@ console.log(dec_reinit);
 console.log(dec_update);
 console.log(dec_only);
 
-var dec_reinit = 80;
-console.log(dec_reinit);
+// var dec_reinit = 80;//works because var is designed that way
+// console.log(dec_reinit);
 
-dec_update = 70;//updating is possible in LET
-console.log(dec_update)
+// dec_update = 70;//updating is possible in LET
+// console.log(dec_update)
 //let dec_update = 70; syntax error identifier already declared
 
 //const dec_only = 60;//syntax error identifier already declared
