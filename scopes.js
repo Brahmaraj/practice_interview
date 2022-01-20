@@ -51,3 +51,4 @@ function first(){
 }
 first()(); // due to this first is popped of the stack and second is pushed as after return 
             // there is nothing so the returned function is now added to stack !!!!
+
