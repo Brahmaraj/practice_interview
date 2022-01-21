@@ -21,5 +21,5 @@ console.log(dec_only+Number(str_num));//string converted to number and adder Exp
 // console.log(dec_update)
 //let dec_update = 70; syntax error identifier already declared
 
-//const dec_only = 60;//syntax error identifier already declared
-//dec_only = 60;//type-error assignment to constant variable
+const dec_only = 60;//syntax error identifier already declared
+dec_only = 60;//type-error assignment to constant variable
