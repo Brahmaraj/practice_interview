@@ -71,3 +71,24 @@ console.log(person1.greet());
 console.log(Object.setPrototypeOf(person1, newPerson));
 console.log(person1.newgreet()); //__proto__ used to look up the chain
 console.log(person1.__proto__)//
+
+Person.prototype = function greet(){
+    return (`${this.name} is ${this.age} years old.`)
+}
+
+console.log(person1.greet());
+
+class Person1{
+    constructor(f_name,l_name,age,sex){
+        this.firstName = f_name;
+        this.lastName = l_name;
+        this.age = age;
+        this.sex = sex;
+    }
+    static greet(context){
+        console.log(`Welcome ${context.firstName} ${context.lastName}`);
+    }
+}
+
+const my_pers1 = new Person1("brahma","rathod",21,"M");
+Person1.greet(my_pers1);
