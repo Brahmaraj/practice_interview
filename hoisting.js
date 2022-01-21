@@ -14,8 +14,8 @@ var str_num = "20";
 console.log(dec_only+str_num);//num converted to string Implicit Type Coercion
 console.log(dec_only+Number(str_num));//string converted to number and adder Explicit type Conversion
 
-// var dec_reinit = 80;//works because var is designed that way
-// console.log(dec_reinit);
+var dec_reinit = 80;//works because var is designed that way
+console.log(dec_reinit);
 
 dec_update = 70;//updating is possible in LET
 console.log(dec_update)
