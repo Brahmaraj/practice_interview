@@ -1,6 +1,6 @@
-//console.log(dec_reinit);//undefined because of hoisting
-//console.log(dec_update);//Reference Error because of hoisting in TDZ
-//console.log(dec_only);//Reference Error because of hoisting in TDZ
+console.log(dec_reinit);//undefined because of hoisting
+console.log(dec_update);//Reference Error because of hoisting in TDZ
+console.log(dec_only);//Reference Error because of hoisting in TDZ
 
 var dec_reinit = 50;
 let dec_update = 60;
