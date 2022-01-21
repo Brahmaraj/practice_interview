@@ -20,7 +20,12 @@ let person1 = {
 // console.log(my_weak_map);
 // console.log(my_weak_set);
 //Object Destructuring
-const {name, l_name, ...lastthree} = person1; // has to be same as the property name
+const {name, l_name, ...lastthree} = person1; // has to be same as the property name//rest paramater (csv -> (array/object/brings values together))
 console.log(name);
 console.log(l_name)
 console.log(lastthree)
+
+let arr = [1,2,3,4,5,6,7,8,9,0];
+console.log(arr);
+console.log(...arr); //spread operator (array -> csv)
+console.log(person1);
