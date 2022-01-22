@@ -1,22 +1,24 @@
 
 var prom = new Promise((resolve,reject)=>{
-    resolve(count);
+    resolve(function (val){
+        setTimeout(()=>console.log(val),Number(val+"000"))
+    });
 })
-let a = 0
-function count(){
-    a++;
-    setTimeout(()=>{
-        console.log(a);
-    },Number(a+"000"));
-}
+
 
 prom.then((res)=> {
-    res();
+    res(1)
     return res;
 }).then((res)=>{
-    res();
+    res(2)
     return res;
 }).then((res)=>{
-    res();
+    res(1)
     return res;
 })
+
+
+
+setTimeout(()=>console.log("1 synchronous"),1000);
+setTimeout(()=>console.log("2 synchronous"),1000);
+setTimeout(()=>console.log("1 synchronous"),1000);
