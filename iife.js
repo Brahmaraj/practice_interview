@@ -48,7 +48,7 @@ let count = (function abc() {
        }; 
      })();  
 console.log(count);
-console.log(count.num);
+console.log(count.num); // because of closure retains the value of num....
 console.log(count.num);
 console.log(count.num);
 console.log(count.num);
