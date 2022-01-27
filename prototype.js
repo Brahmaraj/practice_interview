@@ -92,3 +92,13 @@ class Person1{
 
 const my_pers1 = new Person1("brahma","rathod",21,"M");
 Person1.greet(my_pers1);
+
+var obj1 = {
+    name:"Mumbai"
+}
+var obj2 = {
+    where:"Goa"
+}
+Object.setPrototypeOf(obj2, obj1);
+console.log(obj2);
+console.log(obj2.name);
