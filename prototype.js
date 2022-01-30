@@ -102,3 +102,4 @@ var obj2 = {
 Object.setPrototypeOf(obj2, obj1);
 console.log(obj2);
 console.log(obj2.name);
+console.log(Person)
